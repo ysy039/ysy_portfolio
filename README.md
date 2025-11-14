@@ -1,6 +1,4 @@
-# ysy_portfolio
-----퍼널 분석 – 분석 목표 & 방법----
-1. 분석 목표
+# SQL Funnel & Pre/Post Analysis – Cosmetics E-commerce
 
 화장품 쇼핑몰의 “한 세션”이 얼마나 아래 단계까지 내려가는지 보는 것:
 
@@ -10,18 +8,21 @@ cart : 장바구니에 담은 적이 있는 세션 수
 
 purchase : 구매까지 완료한 세션 수
 
-궁극적으로 알고 싶은 것
 
--> 전체 세션 중 view → cart 전환율, cart → purchase 전환율, view → purchase 최종 전환율
+-> 전체 세션 중
 
-추가로, 브랜드/카테고리는 결측이 많으니 값이 있는 부분만 활용해서 브랜드별 / 카테고리별로 어느 정도 차이가 있는지 맛보기 정도
+view → cart 전환율
 
-2. 퍼널 분석용 핵심 아이디어
+cart → purchase 전환율
 
-단위는 세션(user_session) 으로 잡고 각 세션에서 view가 한 번이라도 있었는지, cart가 한 번이라도 있었는지, purchase가 한 번이라도 있었는지를 체크하고, 단계별로 “해당 단계까지 도달한 세션 수”를 카운트한다.
+view → purchase 최종 전환율
+
+추가로 브랜드,카테고리는 결측이 많으니 
+
+값이 있는 부분만 활용해서 브랜드별 / 카테고리별로 어느 정도 차이가 있는지 맛보기 정도
 
 
-# SQL Funnel & Pre/Post Analysis – Cosmetics E-commerce
+
 
 ## 1. 프로젝트 개요
 - 데이터: 화장품 전자상거래 매장의 이벤트 로그 (view, cart, remove_from_cart, purchase)
